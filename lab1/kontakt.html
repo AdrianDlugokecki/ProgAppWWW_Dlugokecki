@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt i Formularz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="produkt.html">Produkt</a></li>
+                <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Formularz zapytania</h1>
+
+        <p>Formularz demonstracyjny. Dane pojawią się w adresie strony; zapytanie nie zostanie zapisane ani wysłane e-mailem.</p>
+
+        <form action="kontakt.html" method="get" class="contact-form">
+            <div class="form-group">
+                <label for="email">E-mail (wymagane):</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="produkt">Produkt (wymagane):</label>
+                <select id="produkt" name="produkt" required>
+                    <option value="">Wybierz produkt</option>
+                    <option value="produkt1">Klawiatura mechaniczna</option>
+                    <option value="produkt2">Mysz Bezprzewodowa</option>
+                    <option value="produkt3">Słuchawki nauszne</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ilosc">Liczba sztuk (od 1 do 5, wymagane):</label>
+                <input type="number" id="ilosc" name="ilosc" min="1" max="5" step="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="wiadomosc">Wiadomość (od 10 do 500 znaków, wymagane):</label>
+                <textarea id="wiadomosc" name="wiadomosc" minlength="10" maxlength="500" required></textarea>
+            </div>
+
+            <button type="submit">Sprawdź zapytanie</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Stopka strony</p>
+    </footer>
+
+</body>
+</html>
