@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep - Kontakt i zapytanie</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="produkt.html">Produkt</a></li>
+                <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+                <li><a href="../lab4.php">Katalog PHP</a></li>
+            </ul>
+            <button type="button" id="theme-toggle" class="btn-theme" aria-pressed="false">Tryb ciemny</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Formularz kontaktowy i wycena</h1>
+
+        <form id="order-form" novalidate>
+            <div class="form-group">
+                <label for="produkt-select">Wybierz produkt:</label>
+                <select id="produkt-select" name="produkt">
+                    <option value="klawiatura">Klawiatura Mechaniczna (299,00 zł)</option>
+                    <option value="mysz">Mysz Bezprzewodowa (159,00 zł)</option>
+                    <option value="sluchawki">Słuchawki nauszne (249,00 zł)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ilosc">Ilość (1–5 szt.):</label>
+                <input type="number" id="ilosc" name="ilosc" min="1" max="5" step="1" value="1" required>
+            </div>
+
+            <p id="price-preview" class="price-preview" aria-live="polite">Szacowana wartość: 299,00 zł</p>
+
+            <div class="form-group">
+                <label for="wiadomosc">Treść zapytania (min. 10 znaków):</label>
+                <textarea id="wiadomosc" name="wiadomosc" rows="5" required></textarea>
+                <p id="wiadomosc-error" class="field-error" role="alert" hidden></p>
+            </div>
+
+            <button type="submit">Wyślij zapytanie</button>
+        </form>
+
+        <section id="order-summary" class="order-summary" aria-live="polite" hidden>
+            <h2>Podsumowanie zapytania</h2>
+            <p><strong>Produkt:</strong> <span id="summary-product"></span></p>
+            <p><strong>Ilość:</strong> <span id="summary-quantity"></span></p>
+            <p><strong>Wartość całkowita:</strong> <span id="summary-total"></span></p>
+            <p><strong>Wiadomość:</strong> <span id="summary-message"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Stopka strony</p>
+    </footer>
+
+</body>
+</html>
