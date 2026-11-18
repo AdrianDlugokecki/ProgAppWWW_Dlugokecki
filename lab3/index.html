@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep - Strona Główna</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="vendor/jquery-4.0.0.min.js" defer></script>
+    <script src="js/lab3.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" aria-current="page">Strona główna</a></li>
+                <li><a href="produkt.html">Produkt</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <button type="button" id="theme-toggle" class="btn-theme" aria-pressed="false">Tryb ciemny</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="clock-panel" aria-label="Zegar i data">
+            <p id="clock-display" class="clock-text">Ładowanie daty i czasu...</p>
+            <div class="clock-controls">
+                <button type="button" id="clock-start">Start zegara</button>
+                <button type="button" id="clock-stop">Stop zegara</button>
+            </div>
+        </section>
+
+        <h1>Katalog produktów</h1>
+
+        <section class="search-panel" aria-label="Wyszukiwarka produktów">
+            <div class="form-group">
+                <label for="search-input">Szukaj produktu po nazwie:</label>
+                <input type="search" id="search-input" placeholder="np. Klawiatura, Mysz...">
+            </div>
+            <div aria-live="polite" class="search-status">
+                <p id="search-count">Wyświetlane produkty: 3 z 3</p>
+                <p id="no-results" hidden>Brak produktów spełniających kryteria wyszukiwania.</p>
+            </div>
+        </section>
+
+        <div class="products-grid" id="products-grid">
+            <article class="product-card">
+                <h2>Klawiatura Mechaniczna</h2>
+                <img src="img/produkt1.jpg" alt="Zdjęcie produktu 1" width="600" height="400">
+                <p>Klawiatura mechaniczna o kompaktowym układzie z wielokolorowym podświetleniem.</p>
+                <p>299 PLN</p>
+                <a href="produkt.html">Dowiedz się więcej</a>
+            </article>
+
+            <article class="product-card">
+                <h2>Mysz Bezprzewodowa</h2>
+                <img src="img/produkt2.jpg" alt="Zdjęcie produktu 2" width="600" height="400">
+                <p>Ergonomiczna mysz bezprzewodowa z precyzyjnym czujnikiem optycznym.</p>
+                <p>159 PLN</p>
+            </article>
+
+            <article class="product-card">
+                <h2>Słuchawki nauszne</h2>
+                <img src="img/produkt3.jpg" alt="Zdjęcie produktu 3" width="600" height="400">
+                <p>Słuchawki nauszne z systemem aktywnej redukcji szumów.</p>
+                <p>249 PLN</p>
+            </article>
+        </div>
+
+        <section id="lab3-demo" class="lab3-section" aria-label="Demonstracja jQuery i AJAX">
+            <h2>Demonstracja animacji jQuery i komunikacji AJAX</h2>
+
+            <div class="anim-stage">
+                <button type="button" id="anim-a" class="anim-box" aria-pressed="false">
+                    Animacja A (Kliknij)
+                </button>
+                <button type="button" id="anim-b" class="anim-box">
+                    Animacja B (Najedź / Fokus)
+                </button>
+                <button type="button" id="anim-c" class="anim-box">
+                    Animacja C (Krok +1)
+                </button>
+            </div>
+
+            <div class="lab3-controls">
+                <p id="anim-c-status" role="status">Kroki animacji C: 0 / 5 (160 × 90 px)</p>
+                <button type="button" id="reset-ac">Resetuj A i C</button>
+            </div>
+
+            <div class="ajax-panel">
+                <h3>Test połączenia z serwerem PHP</h3>
+                <button type="button" id="check-server">Sprawdź serwer</button>
+                <p id="server-status" role="status">Status: nie sprawdzono</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Stopka strony</p>
+    </footer>
+
+</body>
+</html>
